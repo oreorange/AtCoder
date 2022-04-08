@@ -1,7 +1,6 @@
 # 第一回　アルゴリズム検定
 
-## A
-2倍チェック　例外処理
+## A　2倍チェック　例外処理
 
 ```java
 import java.util.Scanner;
@@ -20,8 +19,7 @@ public class Main {
 }
 ```
 
-## B
-増減管理　配列の使い方
+## B　増減管理　配列の使い方
 
 ```java
 import java.util.*;
@@ -49,6 +47,27 @@ public class Main {
       }
     // i++;
     }
+  }
+}
+```
+
+## C　配列並び替え
+
+```java
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int[] array = new int[6];
+      for(int i = 0; i < array.length; i++) {
+      array[i] = sc.nextInt();
+      }
+    
+    Arrays.sort(array); //昇順に並び替え
+    System.out.println(array[3]);
+    
   }
 }
 ```
