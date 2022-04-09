@@ -1,5 +1,3 @@
-# ABC
-
 ## 086
 B - 1 21 : 平方数かどうかを判定
 ```java
@@ -37,6 +35,25 @@ public class Main {
     int b = sc.nextInt(); // b値段
     
     System.out.println((x - a) % b); // aは1つ購入、bは買えるだけ購入、余った金額がお釣り
+  }
+}
+```
+
+## PracticeA Welcome to AtCoder
+```java
+import java.util.*;
+
+public class Main {
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int a = sc.nextInt();
+    int[] bc = new int[2];
+    for(int i = 0; i < 2; i++) {
+      bc[i] = sc.nextInt();
+    }
+    String s = sc.next();
+    int tmp = a + bc[0] + bc[1];
+    System.out.println(tmp + " " + s);
   }
 }
 ```

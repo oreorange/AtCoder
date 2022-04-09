@@ -51,7 +51,7 @@ public class Main {
 }
 ```
 
-## C　配列並び替え
+## C　3番目　配列並び替え
 
 ```java
 import java.util.Scanner;
