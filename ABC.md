@@ -93,3 +93,75 @@ public class Main{
   }
 }
 ```
+
+## 083 B : 無限ループになってしまう、失敗例
+
+```java
+import java.util.*;
+
+public class Main{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int tmp = 0;
+    int num = 0;
+    int o = 0;
+      
+    for(int i = 1; i <= n; i++) {
+      o = i;
+      while(0 < i) {
+        tmp += (i % 10);
+        i = (i / 10);
+      }
+      if(a <= tmp && tmp <= b) {
+      num += o;
+      }
+      
+    }
+    System.out.println(num);
+  }
+}
+```
+
+## 083 B : メソッド定義、各桁の和の求め方
+
+```java
+import java.util.*;
+
+public class Main{
+  // 各桁の和を求めるメソッドを作る
+  public static int someSum(int num) {
+    int tmp = 0;
+    while(0 < num) {
+      tmp += num % 10;
+      num /= 10;
+    }
+    return tmp;
+  }
+  
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    int a = sc.nextInt();
+    int b = sc.nextInt();
+    int nums = 0;
+    
+    for(int i = 1; i <= n; i++) { // n回繰り返す
+      int tmp = someSum(i); // someSumメソッドのnumに i を代入してif文判定に使用
+      if(a <= tmp && tmp <= b) {
+      nums += i;
+      }
+    }
+    System.out.println(nums);
+  }
+}
+```
+
+
+## 001 B : 
+
+```java
+
+```
