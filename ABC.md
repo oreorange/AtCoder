@@ -160,6 +160,42 @@ public class Main{
 ```
 
 
+## 088 B : 配列並べ替え Integer型 
+
+```java
+import java.util.*;
+
+public class Main{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int n = sc.nextInt();
+    Integer[] a = new Integer[n]; // int型から、Integer型に変更
+    int alice = 0;
+    int bob = 0;
+    for(int i = 0; i < n; i++) {
+      a[i] = sc.nextInt();
+    }
+    
+    Arrays.sort(a, Collections.reverseOrder()); // 昇順なら ,(コンマ)以降必要なし
+    // 降順はint型はダメらしいので、Integer型に変更
+    for(int i = 0; i < n; i++) {
+      if(i % 2 == 0) {
+        alice += a[i];
+      } else {
+        bob += a[i];
+      }
+    }
+    System.out.println(alice - bob);
+  }
+}
+```
+
+## 001 B : 
+
+```java
+
+```
+
 ## 001 B : 
 
 ```java
