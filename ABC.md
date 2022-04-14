@@ -160,7 +160,7 @@ public class Main{
 ```
 
 
-## 088 B : 配列並べ替え Integer型 
+## 088 B : 配列並べ替え Integer型 ラッパークラス
 
 ```java
 import java.util.*;
@@ -186,6 +186,36 @@ public class Main{
       }
     }
     System.out.println(alice - bob);
+  }
+}
+```
+
+## 085 B : 配列の重複
+
+```java
+// import java.util.*;
+import java.util.Scanner;
+import java.util.HashSet;
+import java.util.Arrays;
+
+public class Main{
+  public static void main(String[] args) {
+    Scanner sc = new Scanner(System.in);
+    int N = sc.nextInt();
+    int[] d = new int[N];
+    for(int i = 0; i < N; i++) {
+      d[i] = sc.nextInt();
+    }
+    
+    HashSet hs = new HashSet(); //重複を排除して要素を格納するクラス
+    int count = 0;
+    for(int i = 0; i < N; i++) {
+      hs.add(d[i]);
+      // count++; 重複は弾けるがカウントされる
+    }
+    // System.out.println(Arrays.toString(d));
+    // System.out.println(hs.length); // .length では要素数を取得できない、なぜ？
+    System.out.println(hs.size());
   }
 }
 ```
